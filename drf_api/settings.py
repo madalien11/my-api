@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 ]
 
-# SITE_ID = 1
+SITE_ID = 2
 
 # LOGIN_REDIRECT_URL = '/'
 
@@ -113,10 +113,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'demo_1',
         'USER': 'madalien11',
+        # 'PASSWORD': 'O1YMkq1wBwOUm',
         'PASSWORD': '615428134MaD',
         'HOST': 'database-1.cdipwaznitlj.us-east-2.rds.amazonaws.com',
         'PORT': '5432'
     }
+}
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+        'REGISTER_SERIALIZER': 'core.serializers.RegisterSerializer',
 }
 
 
